@@ -12,3 +12,5 @@ backend/venv/
 scratch/
 .env
 .env.production
+.vercel
+.env*.local
