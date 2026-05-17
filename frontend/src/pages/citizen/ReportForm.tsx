@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import * as confetti from "canvas-confetti";
+import confetti from "canvas-confetti";
 import { Mic, UploadCloud } from "lucide-react";
 import { AIResultCard } from "../../components/AIResultCard";
 import { createReport, uploadReportImage } from "../../api/reports";
