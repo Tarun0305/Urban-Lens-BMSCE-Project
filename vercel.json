@@ -15,10 +15,14 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/[...all].py"
+      "source": "/api/(.*)",
+      "destination": "/api/[...all].py"
+    },
+    {
+      "source": "(.*)",
+      "destination": "/index.html"
     }
   ]
 }
