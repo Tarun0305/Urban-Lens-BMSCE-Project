@@ -30,7 +30,14 @@ import os
 
 app = FastAPI(title="UrbanLens API", lifespan=lifespan)
 
-origins = ["*"]  # Allow all origins for hackathon production stability
+# CORS configuration - allow frontend origins
+origins = [
+    "https://urban-lens-blue.vercel.app",  # Vercel production
+    "https://urbanlens-techno.railway.app",  # Railway API (for local testing)
+    "http://localhost:5173",  # Local development (Vite)
+    "http://localhost:3000",  # Alternative local development
+    "*"  # Allow all for development/hackathon
+]
 
 app.add_middleware(
     CORSMiddleware,
