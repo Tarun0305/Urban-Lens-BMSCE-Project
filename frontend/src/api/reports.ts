@@ -88,7 +88,8 @@ export async function uploadReportImage(file: File, category: string) {
 export function mediaUrl(path: string | null | undefined) {
   if (!path) return "";
   if (path.startsWith("http")) return path;
-  const base = import.meta.env.VITE_API_URL || "https://urbanlens-techno.railway.app";
+  const base =
+    import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:8000" : "");
   if (base) return `${base.replace(/\/$/, "")}${path}`;
   return path;
 }

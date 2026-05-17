@@ -38,6 +38,7 @@ if env_origins:
     origins = [origin.strip() for origin in env_origins.split(",") if origin.strip()]
 else:
     origins = [
+        "https://urban-lens-blue.vercel.app",
         "https://urbanlens-techno.vercel.app",
         "https://urbanlens-sandy.vercel.app",
         "https://urbanlens-techno.railway.app",
